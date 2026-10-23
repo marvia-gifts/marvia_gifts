@@ -1,14 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvia Gifts | Handmade Pipe Cleaner Flowers</title>
-
+    
     <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
         :root {
             --primary-color: #ff758f;
@@ -60,23 +60,10 @@
         }
 
         @keyframes floatSlow {
-            0% {
-                transform: translateY(100vh) rotate(0deg) scale(0.8);
-                opacity: 0;
-            }
-
-            20% {
-                opacity: 0.8;
-            }
-
-            80% {
-                opacity: 0.8;
-            }
-
-            100% {
-                transform: translateY(-10vh) rotate(360deg) scale(1.2);
-                opacity: 0;
-            }
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+            20% { opacity: 0.8; }
+            80% { opacity: 0.8; }
+            100% { transform: translateY(-10vh) rotate(360deg) scale(1.2); opacity: 0; }
         }
 
         /* --- Header & Navbar --- */
@@ -122,11 +109,11 @@
             animation: pulseGlow 3s infinite alternate;
         }
 
-            .logo-icon-wrapper i {
-                color: white;
-                font-size: 1.5rem;
-                animation: rotateSparkle 6s ease-in-out infinite alternate;
-            }
+        .logo-icon-wrapper i {
+            color: white;
+            font-size: 1.5rem;
+            animation: rotateSparkle 6s ease-in-out infinite alternate;
+        }
 
         .logo-sparkle {
             position: absolute;
@@ -159,37 +146,19 @@
         }
 
         @keyframes pulseGlow {
-            0% {
-                box-shadow: 0 0 10px rgba(255, 117, 143, 0.4);
-            }
-
-            100% {
-                box-shadow: 0 0 22px rgba(192, 132, 252, 0.8);
-            }
+            0% { box-shadow: 0 0 10px rgba(255, 117, 143, 0.4); }
+            100% { box-shadow: 0 0 22px rgba(192, 132, 252, 0.8); }
         }
 
         @keyframes rotateSparkle {
-            0% {
-                transform: scale(1) rotate(0deg);
-            }
-
-            50% {
-                transform: scale(1.15) rotate(15deg);
-            }
-
-            100% {
-                transform: scale(1) rotate(-15deg);
-            }
+            0% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.15) rotate(15deg); }
+            100% { transform: scale(1) rotate(-15deg); }
         }
 
         @keyframes sparkleBounce {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-            }
-
-            50% {
-                transform: translateY(-4px) scale(1.3);
-            }
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.3); }
         }
 
         .nav-links {
@@ -199,35 +168,35 @@
             align-items: center;
         }
 
-            .nav-links a {
-                text-decoration: none;
-                color: var(--text-dark);
-                font-weight: 500;
-                font-size: 0.95rem;
-                transition: all 0.3s ease;
-                position: relative;
-                cursor: pointer;
-            }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
 
-                .nav-links a::after {
-                    content: '';
-                    position: absolute;
-                    width: 0%;
-                    height: 2px;
-                    bottom: -4px;
-                    left: 0;
-                    background-color: var(--primary-color);
-                    transition: width 0.3s ease;
-                    border-radius: 2px;
-                }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
 
-                .nav-links a:hover::after {
-                    width: 100%;
-                }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
 
-                .nav-links a:hover {
-                    color: var(--primary-color);
-                }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
 
         .instagram-btn {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
@@ -241,14 +210,12 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease !important;
         }
 
-            .instagram-btn::after {
-                display: none !important;
-            }
+        .instagram-btn::after { display: none !important; }
 
-            .instagram-btn:hover {
-                transform: translateY(-2px) scale(1.03);
-                box-shadow: 0 6px 18px rgba(220, 39, 67, 0.4);
-            }
+        .instagram-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 6px 18px rgba(220, 39, 67, 0.4);
+        }
 
         /* --- Hero Section --- */
         .hero {
@@ -281,11 +248,11 @@
             margin-bottom: 1.2rem;
         }
 
-            .hero h1 span {
-                background: linear-gradient(135deg, #ff4d6d, #8338ec);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+        .hero h1 span {
+            background: linear-gradient(135deg, #ff4d6d, #8338ec);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
         .hero p {
             font-size: 1.1rem;
@@ -320,10 +287,10 @@
             gap: 0.6rem;
         }
 
-            .btn-primary:hover {
-                transform: translateY(-4px);
-                box-shadow: var(--shadow-hover);
-            }
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
 
         .btn-outline {
             background: rgba(255, 255, 255, 0.9);
@@ -341,11 +308,11 @@
             gap: 0.6rem;
         }
 
-            .btn-outline:hover {
-                border-color: var(--primary-color);
-                color: var(--primary-color);
-                transform: translateY(-4px);
-            }
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-4px);
+        }
 
         /* --- Container & Section Headers --- */
         .container {
@@ -408,10 +375,10 @@
             justify-content: space-between;
         }
 
-            .product-card:hover {
-                transform: translateY(-10px);
-                box-shadow: var(--shadow-hover);
-            }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
 
         .product-img-box {
             height: 200px;
@@ -424,12 +391,12 @@
             justify-content: center;
         }
 
-            .product-img-box img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: transform 0.5s ease;
-            }
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
 
         .product-card:hover .product-img-box img {
             transform: scale(1.08);
@@ -469,10 +436,10 @@
             cursor: pointer;
         }
 
-            .btn-sm:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 16px rgba(255, 117, 143, 0.35);
-            }
+        .btn-sm:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 117, 143, 0.35);
+        }
 
         /* --- Customization Studio --- */
         .builder-section {
@@ -491,28 +458,22 @@
             gap: 3rem;
         }
 
-        @media (max-width: 900px) {
-            .builder-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .form-group {
             margin-bottom: 1.5rem;
         }
 
-            .form-group label {
-                display: block;
-                font-weight: 600;
-                margin-bottom: 0.6rem;
-                font-size: 0.95rem;
-                color: var(--text-dark);
-            }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
 
-                .form-group label i {
-                    color: var(--primary-color);
-                    margin-right: 0.4rem;
-                }
+        .form-group label i {
+            color: var(--primary-color);
+            margin-right: 0.4rem;
+        }
 
         select, input[type="number"], textarea {
             width: 100%;
@@ -526,10 +487,10 @@
             color: var(--text-dark);
         }
 
-            select:focus, input:focus, textarea:focus {
-                border-color: var(--primary-color);
-                box-shadow: 0 0 0 4px rgba(255, 117, 143, 0.15);
-            }
+        select:focus, input:focus, textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(255, 117, 143, 0.15);
+        }
 
         /* Live Preview Card */
         .preview-card {
@@ -542,17 +503,17 @@
             justify-content: space-between;
         }
 
-            .preview-card h3 {
-                font-family: 'Playfair Display', serif;
-                font-size: 1.4rem;
-                color: var(--primary-hover);
-                border-bottom: 1px solid var(--secondary-color);
-                padding-bottom: 0.8rem;
-                margin-bottom: 1.5rem;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
+        .preview-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary-hover);
+            border-bottom: 1px solid var(--secondary-color);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
         .summary-row {
             display: flex;
@@ -562,14 +523,14 @@
             font-size: 0.95rem;
         }
 
-            .summary-row span {
-                color: var(--text-muted);
-            }
+        .summary-row span {
+            color: var(--text-muted);
+        }
 
-            .summary-row strong {
-                color: var(--text-dark);
-                font-weight: 600;
-            }
+        .summary-row strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
 
         .total-box {
             border-top: 2px solid var(--secondary-color);
@@ -611,11 +572,11 @@
             transition: all 0.3s ease;
         }
 
-            .whatsapp-btn:hover {
-                background: #20ba5a;
-                transform: translateY(-3px);
-                box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
-            }
+        .whatsapp-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
+        }
 
         /* Sections Control Display */
         .page-section {
@@ -638,16 +599,68 @@
             z-index: 1;
         }
 
-            footer p {
-                font-size: 0.9rem;
-                color: var(--text-muted);
+        footer p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* --- RESPONSIVE DESIGN FOR MOBILE & PHONES --- */
+        @media (max-width: 900px) {
+            .builder-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .navbar {
+                padding: 0.8rem 1rem;
+                flex-direction: column;
+                gap: 0.8rem;
             }
 
-            footer a {
-                color: var(--primary-color);
-                text-decoration: none;
-                font-weight: 600;
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 3rem 1rem 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .builder-section {
+                padding: 1.5rem 1rem;
+                border-radius: 20px;
+            }
+
+            .nav-links {
+                font-size: 0.85rem;
+                gap: 0.8rem;
+            }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -688,9 +701,9 @@
         </div>
     </header>
 
-    <!-- MAIN PAGE CONTAINER (HOME, PRICE LIST, CUSTOM STUDIO UNDER EACH OTHER) -->
+    <!-- MAIN PAGE CONTAINER -->
     <div id="section-main" class="page-section">
-
+        
         <!-- Hero Section -->
         <section class="hero" id="home">
             <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> Little flowers • Big happiness</span>
@@ -707,8 +720,8 @@
         </section>
 
         <div class="container">
-
-            <!-- SECTION 1: PRICE LIST (BY FLOWER COUNT / SIZE) -->
+            
+            <!-- SECTION 1: PRICE LIST -->
             <div class="section-header" id="bouquets">
                 <h2 class="section-title">Marvia Price List</h2>
                 <p class="section-subtitle">Handmade Pipe Cleaner Flowers - Little flowers, big happiness</p>
@@ -817,6 +830,7 @@
                     <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('8 Flowers Bouquet', 20.00)">Select</button>
                 </div>
 
+                <!-- UPDATED PRICING CARDS BELOW -->
                 <div class="product-card">
                     <div class="product-img-box">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="10 Roses Bouquet">
@@ -829,32 +843,32 @@
 
                 <div class="product-card">
                     <div class="product-img-box">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="15 Roses Bouquet">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="15 Flowers Bouquet">
                     </div>
-                    <h3>15 Roses Bouquet</h3>
-                    <p>Luxurious 15-rose bouquet</p>
+                    <h3>15 Flowers Bouquet</h3>
+                    <p>Luxurious 15-flower bouquet</p>
                     <div class="price-tag">$30.00</div>
-                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('15 Roses Bouquet', 30.00)">Select</button>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('15 Flowers Bouquet', 30.00)">Select</button>
                 </div>
 
                 <div class="product-card">
                     <div class="product-img-box">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="20 Roses Bouquet">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="20 Flowers Bouquet">
                     </div>
-                    <h3>20 Roses Bouquet</h3>
-                    <p>Grand 20-rose bouquet</p>
+                    <h3>20 Flowers Bouquet</h3>
+                    <p>Grand 20-flower bouquet</p>
                     <div class="price-tag">$35.00</div>
-                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('20 Roses Bouquet', 35.00)">Select</button>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('20 Flowers Bouquet', 35.00)">Select</button>
                 </div>
 
                 <div class="product-card">
                     <div class="product-img-box">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="25 Roses Bouquet">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="25 Flowers Bouquet">
                     </div>
-                    <h3>25 Roses Bouquet</h3>
-                    <p>Ultimate 25-rose statement bouquet</p>
+                    <h3>25 Flowers Bouquet</h3>
+                    <p>Ultimate 25-flower statement bouquet</p>
                     <div class="price-tag">$40.00</div>
-                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('25 Roses Bouquet', 40.00)">Select</button>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('25 Flowers Bouquet', 40.00)">Select</button>
                 </div>
 
                 <div class="product-card">
@@ -896,7 +910,7 @@
 
             <div class="builder-section">
                 <div class="builder-grid">
-
+                    
                     <!-- Builder Form -->
                     <div class="builder-form">
                         <div class="form-group">
@@ -914,9 +928,9 @@
                                 <option value="6 Flowers Bouquet" data-price="18.0">6 Flowers Bouquet ($18.00)</option>
                                 <option value="8 Flowers Bouquet" data-price="20.0">8 Flowers Bouquet ($20.00)</option>
                                 <option value="10 Roses Bouquet" data-price="25.0">10 Roses Bouquet ($25.00)</option>
-                                <option value="15 Roses Bouquet" data-price="30.0">15 Roses Bouquet ($30.00)</option>
-                                <option value="20 Roses Bouquet" data-price="35.0">20 Roses Bouquet ($35.00)</option>
-                                <option value="25 Roses Bouquet" data-price="40.0">25 Roses Bouquet ($40.00)</option>
+                                <option value="15 Flowers Bouquet" data-price="30.0">15 Flowers Bouquet ($30.00)</option>
+                                <option value="20 Flowers Bouquet" data-price="35.0">20 Flowers Bouquet ($35.00)</option>
+                                <option value="25 Flowers Bouquet" data-price="40.0">25 Flowers Bouquet ($40.00)</option>
                                 <option value="30 Flowers Bouquet" data-price="48.0">30 Flowers Bouquet ($48.00)</option>
                                 <option value="35 Flowers Bouquet" data-price="55.0">35 Flowers Bouquet ($55.00)</option>
                                 <option value="40 Flowers Bouquet" data-price="62.0">40 Flowers Bouquet ($62.00)</option>
@@ -945,7 +959,7 @@
                     <div class="preview-card">
                         <div>
                             <h3><span><i class="fa-solid fa-receipt"></i> Order Summary</span> <i class="fa-solid fa-sparkles"></i></h3>
-
+                            
                             <div class="summary-row">
                                 <span>Selected Item:</span>
                                 <strong id="sum-flower">Single Rose</strong>
@@ -1140,76 +1154,76 @@
 
     <!-- Interactive JavaScript -->
     <script>
-                function showMainPage(targetId) {
-                    document.getElementById('section-main').style.display = 'block';
-                    document.getElementById('section-catalog').style.display = 'none';
+        function showMainPage(targetId) {
+            document.getElementById('section-main').style.display = 'block';
+            document.getElementById('section-catalog').style.display = 'none';
+            
+            if(targetId) {
+                setTimeout(() => {
+                    const el = document.getElementById(targetId);
+                    if(el) el.scrollIntoView({ behavior: 'smooth' });
+                }, 50);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
 
-                    if(targetId) {
-                        setTimeout(() => {
-                            const el = document.getElementById(targetId);
-                            if(el) el.scrollIntoView({ behavior: 'smooth' });
-                        }, 50);
-                    } else {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }
+        function showCatalogPage() {
+            document.getElementById('section-main').style.display = 'none';
+            document.getElementById('section-catalog').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateCustomizer() {
+            const flowerSelect = document.getElementById('flower-type');
+            const flowerColor = document.getElementById('flower-color').value;
+            const price = parseFloat(flowerSelect.options[flowerSelect.selectedIndex].getAttribute('data-price'));
+
+            document.getElementById('sum-flower').innerText = flowerSelect.value;
+            document.getElementById('sum-color').innerText = flowerColor;
+            document.getElementById('total-price-val').innerText = '$' + price.toFixed(2);
+        }
+
+        function selectPreset(itemName, price) {
+            const select = document.getElementById('flower-type');
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].text.includes(itemName) || select.options[i].value === itemName) {
+                    select.selectedIndex = i;
+                    break;
                 }
+            }
+            updateCustomizer();
+            document.getElementById('builder').scrollIntoView({ behavior: 'smooth' });
+        }
 
-                function showCatalogPage() {
-                    document.getElementById('section-main').style.display = 'none';
-                    document.getElementById('section-catalog').style.display = 'block';
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
+        function selectFromCatalog(itemName, price) {
+            showMainPage('builder');
+            selectPreset(itemName, price);
+        }
 
-                function updateCustomizer() {
-                    const flowerSelect = document.getElementById('flower-type');
-                    const flowerColor = document.getElementById('flower-color').value;
-                    const price = parseFloat(flowerSelect.options[flowerSelect.selectedIndex].getAttribute('data-price'));
+        function sendOrder() {
+            const flower = document.getElementById('sum-flower').innerText;
+            const color = document.getElementById('sum-color').innerText;
+            const total = document.getElementById('total-price-val').innerText;
+            const notes = document.getElementById('notes').value;
 
-                    document.getElementById('sum-flower').innerText = flowerSelect.value;
-                    document.getElementById('sum-color').innerText = flowerColor;
-                    document.getElementById('total-price-val').innerText = '$' + price.toFixed(2);
-                }
+            let message = `Hello Marvia Gifts! 🌸\nI would like to order:\n\n`;
+            message += `• Item: ${flower}\n`;
+            message += `• Color Style: ${color}\n`;
+            
+            if (notes.trim() !== "") {
+                message += `• Notes: ${notes}\n`;
+            }
+            
+            message += `\n*Total Price:* ${total}`;
 
-                function selectPreset(itemName, price) {
-                    const select = document.getElementById('flower-type');
-                    for (let i = 0; i < select.options.length; i++) {
-                        if (select.options[i].text.includes(itemName) || select.options[i].value === itemName) {
-                            select.selectedIndex = i;
-                            break;
-                        }
-                    }
-                    updateCustomizer();
-                    document.getElementById('builder').scrollIntoView({ behavior: 'smooth' });
-                }
+            const phoneNumber = "243849834848";
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
 
-                function selectFromCatalog(itemName, price) {
-                    showMainPage('builder');
-                    selectPreset(itemName, price);
-                }
-
-                function sendOrder() {
-                    const flower = document.getElementById('sum-flower').innerText;
-                    const color = document.getElementById('sum-color').innerText;
-                    const total = document.getElementById('total-price-val').innerText;
-                    const notes = document.getElementById('notes').value;
-
-                    let message = `Hello Marvia Gifts! 🌸\nI would like to order:\n\n`;
-                    message += `• Item: ${flower}\n`;
-                    message += `• Color Style: ${color}\n`;
-
-                    if (notes.trim() !== "") {
-                        message += `• Notes: ${notes}\n`;
-                    }
-
-                    message += `\n*Total Price:* ${total}`;
-
-                    const phoneNumber = "243849834848";
-                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-                    window.open(whatsappUrl, '_blank');
-                }
-
-                window.onload = updateCustomizer;
+        window.onload = updateCustomizer;
     </script>
 </body>
 </html>
