@@ -1,0 +1,1215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvia Gifts | Handmade Pipe Cleaner Flowers</title>
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #ff758f;
+            --primary-hover: #ff4d6d;
+            --secondary-color: #ffccd5;
+            --accent-color: #c084fc;
+            --bg-gradient: linear-gradient(135deg, #fff0f3 0%, #ffe5ec 50%, #f3e8ff 100%);
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-dark: #2b2d42;
+            --text-muted: #6c757d;
+            --glass-border: 1px solid rgba(255, 255, 255, 0.8);
+            --shadow-soft: 0 15px 35px rgba(255, 117, 143, 0.12);
+            --shadow-hover: 0 20px 40px rgba(255, 117, 143, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-dark);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- Floating Background Elements --- */
+        .floating-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .floating-flower {
+            position: absolute;
+            font-size: 1.8rem;
+            color: rgba(255, 117, 143, 0.25);
+            animation: floatSlow 12s infinite linear;
+        }
+
+        @keyframes floatSlow {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-10vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* --- Header & Navbar --- */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.8rem 2rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .logo-icon-wrapper {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff758f, #c084fc);
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(255, 117, 143, 0.4);
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+            .logo-icon-wrapper i {
+                color: white;
+                font-size: 1.5rem;
+                animation: rotateSparkle 6s ease-in-out infinite alternate;
+            }
+
+        .logo-sparkle {
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            font-size: 0.9rem;
+            color: #ffd166;
+            animation: sparkleBounce 1.5s infinite ease-in-out;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff4d6d, #8338ec);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-tagline {
+            display: block;
+            font-size: 0.65rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: -4px;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 117, 143, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 0 22px rgba(192, 132, 252, 0.8);
+            }
+        }
+
+        @keyframes rotateSparkle {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.15) rotate(15deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(-15deg);
+            }
+        }
+
+        @keyframes sparkleBounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-4px) scale(1.3);
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+            align-items: center;
+        }
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--text-dark);
+                font-weight: 500;
+                font-size: 0.95rem;
+                transition: all 0.3s ease;
+                position: relative;
+                cursor: pointer;
+            }
+
+                .nav-links a::after {
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 2px;
+                    bottom: -4px;
+                    left: 0;
+                    background-color: var(--primary-color);
+                    transition: width 0.3s ease;
+                    border-radius: 2px;
+                }
+
+                .nav-links a:hover::after {
+                    width: 100%;
+                }
+
+                .nav-links a:hover {
+                    color: var(--primary-color);
+                }
+
+        .instagram-btn {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            box-shadow: 0 4px 12px rgba(220, 39, 67, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        }
+
+            .instagram-btn::after {
+                display: none !important;
+            }
+
+            .instagram-btn:hover {
+                transform: translateY(-2px) scale(1.03);
+                box-shadow: 0 6px 18px rgba(220, 39, 67, 0.4);
+            }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 5rem 1.5rem 3.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(255, 117, 143, 0.1);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 1.2rem;
+        }
+
+            .hero h1 span {
+                background: linear-gradient(135deg, #ff4d6d, #8338ec);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            color: white;
+            padding: 0.9rem 2.2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+            .btn-primary:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-hover);
+            }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+            border: 2px solid var(--secondary-color);
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+            .btn-outline:hover {
+                border-color: var(--primary-color);
+                color: var(--primary-color);
+                transform: translateY(-4px);
+            }
+
+        /* --- Container & Section Headers --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 4rem 0 2.5rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            margin: 2.5rem 0 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 0.8rem;
+        }
+
+        .mt-50 {
+            margin-top: 3.5rem;
+        }
+
+        /* --- Price List & Catalog Grids --- */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: var(--glass-border);
+            border-radius: 24px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+            .product-card:hover {
+                transform: translateY(-10px);
+                box-shadow: var(--shadow-hover);
+            }
+
+        .product-img-box {
+            height: 200px;
+            border-radius: 18px;
+            margin-bottom: 1.2rem;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe5ec 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .product-img-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+        .product-card:hover .product-img-box img {
+            transform: scale(1.08);
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-dark);
+        }
+
+        .product-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary-hover);
+            margin-bottom: 1rem;
+        }
+
+        .btn-sm {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 117, 143, 0.2);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+            .btn-sm:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 16px rgba(255, 117, 143, 0.35);
+            }
+
+        /* --- Customization Studio --- */
+        .builder-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: var(--glass-border);
+            border-radius: 32px;
+            padding: 3rem 2.5rem;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 5rem;
+        }
+
+        .builder-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 900px) {
+            .builder-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+            .form-group label {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 0.6rem;
+                font-size: 0.95rem;
+                color: var(--text-dark);
+            }
+
+                .form-group label i {
+                    color: var(--primary-color);
+                    margin-right: 0.4rem;
+                }
+
+        select, input[type="number"], textarea {
+            width: 100%;
+            padding: 0.9rem 1.1rem;
+            background: #ffffff;
+            border: 2px solid #f1f3f5;
+            border-radius: 16px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+
+            select:focus, input:focus, textarea:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 4px rgba(255, 117, 143, 0.15);
+            }
+
+        /* Live Preview Card */
+        .preview-card {
+            background: linear-gradient(145deg, #ffffff, #fff5f7);
+            border: 2px dashed var(--secondary-color);
+            border-radius: 24px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+            .preview-card h3 {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.4rem;
+                color: var(--primary-hover);
+                border-bottom: 1px solid var(--secondary-color);
+                padding-bottom: 0.8rem;
+                margin-bottom: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+            .summary-row span {
+                color: var(--text-muted);
+            }
+
+            .summary-row strong {
+                color: var(--text-dark);
+                font-weight: 600;
+            }
+
+        .total-box {
+            border-top: 2px solid var(--secondary-color);
+            padding-top: 1.2rem;
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .total-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .total-amount {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-hover);
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+            transition: all 0.3s ease;
+        }
+
+            .whatsapp-btn:hover {
+                background: #20ba5a;
+                transform: translateY(-3px);
+                box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
+            }
+
+        /* Sections Control Display */
+        .page-section {
+            display: block;
+        }
+
+        #section-catalog {
+            display: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-top: var(--glass-border);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            margin-top: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+            footer p {
+                font-size: 0.9rem;
+                color: var(--text-muted);
+            }
+
+            footer a {
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: 600;
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-bg">
+        <i class="fa-solid fa-spa floating-flower" style="left: 10%; animation-delay: 0s;"></i>
+        <i class="fa-solid fa-heart floating-flower" style="left: 25%; animation-delay: 3s;"></i>
+        <i class="fa-solid fa-seedling floating-flower" style="left: 60%; animation-delay: 6s;"></i>
+        <i class="fa-solid fa-spa floating-flower" style="left: 85%; animation-delay: 2s;"></i>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <a onclick="showMainPage()" class="brand-logo">
+                <div class="logo-icon-wrapper">
+                    <i class="fa-solid fa-spa"></i>
+                    <i class="fa-solid fa-sparkles logo-sparkle"></i>
+                </div>
+                <div>
+                    <span class="logo-text">Marvia Gifts</span>
+                    <span class="logo-tagline">Handmade Flowers</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a onclick="showMainPage('home')">Home</a></li>
+                <li><a onclick="showMainPage('bouquets')">Price List</a></li>
+                <li><a onclick="showCatalogPage()">Flower Catalog</a></li>
+                <li><a onclick="showMainPage('builder')">Custom Studio</a></li>
+                <li>
+                    <a href="https://www.instagram.com/marvia_gifts" target="_blank" class="instagram-btn">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE CONTAINER (HOME, PRICE LIST, CUSTOM STUDIO UNDER EACH OTHER) -->
+    <div id="section-main" class="page-section">
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <span class="hero-badge"><i class="fa-solid fa-sparkles"></i> Little flowers • Big happiness</span>
+            <h1>Eternal Pipe Cleaner Flowers <span>Crafted with Love</span></h1>
+            <p>Handcrafted with love to bring everlasting smiles and warmth to your special moments!</p>
+            <div class="hero-buttons">
+                <a href="#builder" class="btn-primary">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Customize Your Bouquet
+                </a>
+                <button onclick="showCatalogPage()" class="btn-outline">
+                    <i class="fa-solid fa-eye"></i> View Flower Catalog
+                </button>
+            </div>
+        </section>
+
+        <div class="container">
+
+            <!-- SECTION 1: PRICE LIST (BY FLOWER COUNT / SIZE) -->
+            <div class="section-header" id="bouquets">
+                <h2 class="section-title">Marvia Price List</h2>
+                <p class="section-subtitle">Handmade Pipe Cleaner Flowers - Little flowers, big happiness</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Single Flowers -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5upuwp8N1XDdyGEuDRxauq6eUAZkXimVN0KgioDaJGw&s" alt="Single Rose">
+                    </div>
+                    <h3>Single Rose</h3>
+                    <p>Individual handcrafted rose stem</p>
+                    <div class="price-tag">$5.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('Single Rose', 5.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnqcQG0Nbau-Sqf85VI2qP_2blujWMeixjjIybF6TmVw&s" alt="Single Daisy">
+                    </div>
+                    <h3>Single Daisy</h3>
+                    <p>Individual handcrafted daisy stem</p>
+                    <div class="price-tag">$5.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('Single Daisy', 5.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa1oZk0-9qw-Y3kG8TXeLW89DOTL7oqZiveAibxhvNDA&s" alt="Single Tulip">
+                    </div>
+                    <h3>Single Tulip</h3>
+                    <p>Individual handcrafted tulip stem</p>
+                    <div class="price-tag">$5.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('Single Tulip', 5.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf15Ddvh4_yrlJh6-40kyUpu0z3-MGZh0Ayx05ShgtSTP1yc5Im942nL01&s=10" alt="Single Lily / Sunflower">
+                    </div>
+                    <h3>Single Lily / Sunflower</h3>
+                    <p>Individual Lily or Sunflower stem</p>
+                    <div class="price-tag">$5.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('Single Lily/Sunflower', 5.00)">Select</button>
+                </div>
+
+                <!-- Single & Multi Flower Bouquets -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0q_jTmSt1b4RkfFqF3uDQyZKVmRpfAPOkgxDj4_GIWQ&s" alt="Single Flower Bouquet">
+                    </div>
+                    <h3>Single Flower Bouquet</h3>
+                    <p>Wrapped single flower</p>
+                    <div class="price-tag">$8.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('Single Flower Bouquet', 8.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRld0vaRKb5iRFZgGK3mSq6E_7q3wEWsx7Jp6EyDgk61w&s" alt="2 Flowers Bouquet">
+                    </div>
+                    <h3>2 Flowers Bouquet</h3>
+                    <p>Mix & match 2 flowers</p>
+                    <div class="price-tag">$12.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('2 Flowers Bouquet', 12.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPbngYLwdss6TDLCIBvREuBz94E-tCtOAbkDH60MxEtNwBSSfzfholWQe&s=10" alt="4 Flowers Bouquet">
+                    </div>
+                    <h3>4 Flowers Bouquet</h3>
+                    <p>Gorgeous 4-flower wrapped arrangement</p>
+                    <div class="price-tag">$14.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('4 Flowers Bouquet', 14.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz_IJyN9_hRC0ju_d-Q8kINzRFqZ0JEBES20d3HS_gCg&s" alt="5 Flowers Bouquet">
+                    </div>
+                    <h3>5 Flowers Bouquet</h3>
+                    <p>Vibrant 5-flower arrangement</p>
+                    <div class="price-tag">$16.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('5 Flowers Bouquet', 16.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://elleblooming.com.au/cdn/shop/files/DIYSetFlowerBouquet_ViralTigerLiliesmixedtulips_2.png?v=1760344709&width=2000" alt="6 Flowers Bouquet">
+                    </div>
+                    <h3>6 Flowers Bouquet</h3>
+                    <p>Stunning 6-flower mix</p>
+                    <div class="price-tag">$18.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('6 Flowers Bouquet', 18.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoJlu16T0CedBuhtXTVZc73pseglUsnfDsMpH2iTsPWVekyHhQhImb7dKU&s=10" alt="8 Flowers Bouquet">
+                    </div>
+                    <h3>8 Flowers Bouquet</h3>
+                    <p>Full lush 8-flower arrangement</p>
+                    <div class="price-tag">$20.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('8 Flowers Bouquet', 20.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="10 Roses Bouquet">
+                    </div>
+                    <h3>10 Roses Bouquet</h3>
+                    <p>Elegant 10-rose bouquet</p>
+                    <div class="price-tag">$25.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('10 Roses Bouquet', 25.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="15 Roses Bouquet">
+                    </div>
+                    <h3>15 Roses Bouquet</h3>
+                    <p>Luxurious 15-rose bouquet</p>
+                    <div class="price-tag">$30.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('15 Roses Bouquet', 30.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="20 Roses Bouquet">
+                    </div>
+                    <h3>20 Roses Bouquet</h3>
+                    <p>Grand 20-rose bouquet</p>
+                    <div class="price-tag">$35.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('20 Roses Bouquet', 35.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="25 Roses Bouquet">
+                    </div>
+                    <h3>25 Roses Bouquet</h3>
+                    <p>Ultimate 25-rose statement bouquet</p>
+                    <div class="price-tag">$40.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('25 Roses Bouquet', 40.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="30 Flowers Bouquet">
+                    </div>
+                    <h3>30 Flowers Bouquet</h3>
+                    <p>Lush 30-flower arrangement</p>
+                    <div class="price-tag">$48.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('30 Flowers Bouquet', 48.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="35 Flowers Bouquet">
+                    </div>
+                    <h3>35 Flowers Bouquet</h3>
+                    <p>Extra large 35-flower bouquet</p>
+                    <div class="price-tag">$55.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('35 Flowers Bouquet', 55.00)">Select</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKeXASHhlmO9SEnJ5sS4CK4YskShaRuP55HJxYS0_FA&s" alt="40 Flowers Bouquet">
+                    </div>
+                    <h3>40 Flowers Bouquet</h3>
+                    <p>Royal 40-flower luxury bouquet</p>
+                    <div class="price-tag">$62.00</div>
+                    <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" onclick="selectPreset('40 Flowers Bouquet', 62.00)">Select</button>
+                </div>
+            </div>
+
+            <!-- SECTION 2: CUSTOMIZATION STUDIO -->
+            <div class="section-header" id="builder">
+                <h2 class="section-title">Customization Studio 🎨</h2>
+                <p class="section-subtitle">Design your custom bouquet and calculate your price instantly</p>
+            </div>
+
+            <div class="builder-section">
+                <div class="builder-grid">
+
+                    <!-- Builder Form -->
+                    <div class="builder-form">
+                        <div class="form-group">
+                            <label for="flower-type"><i class="fa-solid fa-flower"></i> Select Arrangement / Item:</label>
+                            <select id="flower-type" onchange="updateCustomizer()">
+                                <option value="Single Rose" data-price="5.0">Single Rose ($5.00)</option>
+                                <option value="Single Daisy" data-price="5.0">Single Daisy ($5.00)</option>
+                                <option value="Single Tulip" data-price="5.0">Single Tulip ($5.00)</option>
+                                <option value="Single Lily" data-price="5.0">Single Lily ($5.00)</option>
+                                <option value="Single Sunflower" data-price="5.0">Single Sunflower ($5.00)</option>
+                                <option value="Single Flower Bouquet" data-price="8.0">Single Flower Bouquet ($8.00)</option>
+                                <option value="2 Flowers Bouquet" data-price="12.0">2 Flowers Bouquet ($12.00)</option>
+                                <option value="4 Flowers Bouquet" data-price="14.0">4 Flowers Bouquet ($14.00)</option>
+                                <option value="5 Flowers Bouquet" data-price="16.0">5 Flowers Bouquet ($16.00)</option>
+                                <option value="6 Flowers Bouquet" data-price="18.0">6 Flowers Bouquet ($18.00)</option>
+                                <option value="8 Flowers Bouquet" data-price="20.0">8 Flowers Bouquet ($20.00)</option>
+                                <option value="10 Roses Bouquet" data-price="25.0">10 Roses Bouquet ($25.00)</option>
+                                <option value="15 Roses Bouquet" data-price="30.0">15 Roses Bouquet ($30.00)</option>
+                                <option value="20 Roses Bouquet" data-price="35.0">20 Roses Bouquet ($35.00)</option>
+                                <option value="25 Roses Bouquet" data-price="40.0">25 Roses Bouquet ($40.00)</option>
+                                <option value="30 Flowers Bouquet" data-price="48.0">30 Flowers Bouquet ($48.00)</option>
+                                <option value="35 Flowers Bouquet" data-price="55.0">35 Flowers Bouquet ($55.00)</option>
+                                <option value="40 Flowers Bouquet" data-price="62.0">40 Flowers Bouquet ($62.00)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="flower-color"><i class="fa-solid fa-palette"></i> Color / Style Preference:</label>
+                            <select id="flower-color" onchange="updateCustomizer()">
+                                <option value="Pink Theme">Pink Theme</option>
+                                <option value="Classic Red">Classic Red</option>
+                                <option value="Warm Yellow & Orange">Warm Yellow & Orange</option>
+                                <option value="Purple & Lavender">Purple & Lavender</option>
+                                <option value="Blue & White">Blue & White</option>
+                                <option value="Custom Mix">Custom Mix</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes"><i class="fa-solid fa-pen-to-square"></i> Special Notes / Custom Request:</label>
+                            <textarea id="notes" rows="3" placeholder="Add specific flower types, color combinations, ribbon requests, or a card message..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Live Summary Preview Box -->
+                    <div class="preview-card">
+                        <div>
+                            <h3><span><i class="fa-solid fa-receipt"></i> Order Summary</span> <i class="fa-solid fa-sparkles"></i></h3>
+
+                            <div class="summary-row">
+                                <span>Selected Item:</span>
+                                <strong id="sum-flower">Single Rose</strong>
+                            </div>
+                            <div class="summary-row">
+                                <span>Color Style:</span>
+                                <strong id="sum-color">Pink Theme</strong>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="total-box">
+                                <span class="total-title">Total Price:</span>
+                                <span class="total-amount" id="total-price-val">$5.00</span>
+                            </div>
+
+                            <button class="whatsapp-btn" onclick="sendOrder()">
+                                <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> Order via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SEPARATE PAGE/SECTION: FLOWER TYPES CATALOG -->
+    <div id="section-catalog" class="page-section">
+        <div class="container" style="padding-top: 3rem;">
+            <div class="section-header">
+                <h2 class="section-title">Flower Catalog 💐</h2>
+                <p class="section-subtitle">Explore our specific handmade pipe cleaner flower types</p>
+                <button onclick="showMainPage()" class="btn-outline" style="margin-top: 1rem;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Main Page
+                </button>
+            </div>
+
+            <h3 class="category-title">Featured Individual Flowers</h3>
+            <div class="products-grid">
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxDox2NKtaqXxJC9jPLt0PapgP-NegKkPWLG7Gl1HFfw&s" alt="Sunflower">
+                    </div>
+                    <h3>Sunflower</h3>
+                    <p>Classic vibrant yellow sunflower</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Sunflower', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.pinimg.com/736x/ff/c9/77/ffc977e7183a85fd1272d58099da22e5.jpg" alt="Anemone">
+                    </div>
+                    <h3>Anemone</h3>
+                    <p>Soft peach & yellow center bloom</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Rose', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.TAv47EBsK8uYHXqui4HX4QHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Peony">
+                    </div>
+                    <h3>Peony</h3>
+                    <p>Deep velvet burgundy peony</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Rose', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://th.bing.com/th/id/OIP.M-QqmGysfLrpbutKHDYF-AHaJT?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Lily">
+                    </div>
+                    <h3>Lily</h3>
+                    <p>Elegant pink & red star lily</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Lily', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lzxfcmpbrobs8a" alt="Tiger Lily">
+                    </div>
+                    <h3>Tiger Lily</h3>
+                    <p>Spotted pastel pink tiger lily</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Lily', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.pinimg.com/originals/f7/c9/21/f7c9217d61e49229f84b6529e56a7220.jpg" alt="Gerbera Daisy">
+                    </div>
+                    <h3>Gerbera Daisy</h3>
+                    <p>Soft cream-white gerbera daisy</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Daisy', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.ytimg.com/vi/7tDkL3iArAE/maxresdefault.jpg" alt="Orchid">
+                    </div>
+                    <h3>Orchid</h3>
+                    <p>Light purple gradient orchid</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Flower Bouquet', 8.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.knIXQp9McYjNw7B1OvIR6gHaJ4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Anthurium">
+                    </div>
+                    <h3>Anthurium</h3>
+                    <p>Bold dark red tropical flower</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Flower Bouquet', 8.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.ytimg.com/vi/NJ_t8z93Dpc/mqdefault.jpg" alt="Chrysanthemum">
+                    </div>
+                    <h3>Chrysanthemum</h3>
+                    <p>Fluffy baby blue mum blossom</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Flower Bouquet', 8.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.pinimg.com/originals/a8/95/95/a895950b8f410b857ab69fc4e91961b4.jpg" alt="Classic Rose">
+                    </div>
+                    <h3>Classic Rose (Style 1)</h3>
+                    <p>Dark red & black velvet roses</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Rose', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.pinimg.com/originals/fb/62/1c/fb621cf8b325fd525095129aef3822e1.jpg" alt="Pink Rose">
+                    </div>
+                    <h3>Classic Rose (Style 2)</h3>
+                    <p>Soft pink & nude velvet roses</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Rose', 5.00)">Choose This</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.pinimg.com/736x/3b/b4/5f/3bb45f4aa16aeb3fdd366ca9f4cea0e1.jpg" alt="Tulip">
+                    </div>
+                    <h3>Tulip</h3>
+                    <p>Bright blue & pink tulips</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Tulip', 5.00)">Choose This</button>
+                </div>
+
+            </div>
+
+            <!-- Greenery & Fillers -->
+            <h3 class="category-title mt-50">Greenery & Bouquet Fillers</h3>
+            <div class="products-grid" style="margin-bottom: 4rem;">
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwcDu9obZmnio02b6faz4PSiQT0ZidP3GpKakU37XNhA&s" alt="Baby's Breath">
+                    </div>
+                    <h3>Baby's Breath (Lavender)</h3>
+                    <p>Purple accent filler stem</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Flower Bouquet', 8.00)">Select Filler</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://th.bing.com/th/id/OIP.Xd4idTerZnf6E6e8BX84fAAAAA?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Eucalyptus">
+                    </div>
+                    <h3>Eucalyptus</h3>
+                    <p>Rounded green foliage stems</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Daisy', 5.00)">Select Filler</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <img src="https://i.pinimg.com/originals/ee/7d/fa/ee7dfae27feb246bf0c105ef2ffcb335.jpg" alt="Fern">
+                    </div>
+                    <h3>Small Fern</h3>
+                    <p>Textured green fern branch</p>
+                    <button class="btn-sm" onclick="selectFromCatalog('Single Rose', 5.00)">Select Filler</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <a href="https://www.instagram.com/marvia_gifts" target="_blank">Marvia Gifts</a>. All rights reserved. Handcrafted with love 🌸</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+                function showMainPage(targetId) {
+                    document.getElementById('section-main').style.display = 'block';
+                    document.getElementById('section-catalog').style.display = 'none';
+
+                    if(targetId) {
+                        setTimeout(() => {
+                            const el = document.getElementById(targetId);
+                            if(el) el.scrollIntoView({ behavior: 'smooth' });
+                        }, 50);
+                    } else {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
+
+                function showCatalogPage() {
+                    document.getElementById('section-main').style.display = 'none';
+                    document.getElementById('section-catalog').style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+
+                function updateCustomizer() {
+                    const flowerSelect = document.getElementById('flower-type');
+                    const flowerColor = document.getElementById('flower-color').value;
+                    const price = parseFloat(flowerSelect.options[flowerSelect.selectedIndex].getAttribute('data-price'));
+
+                    document.getElementById('sum-flower').innerText = flowerSelect.value;
+                    document.getElementById('sum-color').innerText = flowerColor;
+                    document.getElementById('total-price-val').innerText = '$' + price.toFixed(2);
+                }
+
+                function selectPreset(itemName, price) {
+                    const select = document.getElementById('flower-type');
+                    for (let i = 0; i < select.options.length; i++) {
+                        if (select.options[i].text.includes(itemName) || select.options[i].value === itemName) {
+                            select.selectedIndex = i;
+                            break;
+                        }
+                    }
+                    updateCustomizer();
+                    document.getElementById('builder').scrollIntoView({ behavior: 'smooth' });
+                }
+
+                function selectFromCatalog(itemName, price) {
+                    showMainPage('builder');
+                    selectPreset(itemName, price);
+                }
+
+                function sendOrder() {
+                    const flower = document.getElementById('sum-flower').innerText;
+                    const color = document.getElementById('sum-color').innerText;
+                    const total = document.getElementById('total-price-val').innerText;
+                    const notes = document.getElementById('notes').value;
+
+                    let message = `Hello Marvia Gifts! 🌸\nI would like to order:\n\n`;
+                    message += `• Item: ${flower}\n`;
+                    message += `• Color Style: ${color}\n`;
+
+                    if (notes.trim() !== "") {
+                        message += `• Notes: ${notes}\n`;
+                    }
+
+                    message += `\n*Total Price:* ${total}`;
+
+                    const phoneNumber = "243849834848";
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+                    window.open(whatsappUrl, '_blank');
+                }
+
+                window.onload = updateCustomizer;
+    </script>
+</body>
+</html>
